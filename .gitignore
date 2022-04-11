@@ -1,0 +1,8 @@
+elpa
+*.elc
+auto-save-list
+var
+flycheck_init.el
+transient
+recentf
+*.dat
