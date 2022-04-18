@@ -237,6 +237,9 @@
   (web-mode-enable-auto-closing . t)
   :ensure t)
 
+(leaf yaml-mode
+  ensure: t)
+
 ;; setting end
 
 (provide 'init)
