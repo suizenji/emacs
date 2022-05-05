@@ -211,7 +211,7 @@
 (leaf php-mode
   :ensure t
   :url "https://github.com/emacs-php/php-mode"
-  :custom ((php-mode-coding-style 'psr2)))
+  :custom ((php-enable-psr2-coding-style)))
 
 ;; fixme mode-map
 ;; define-keyだとうまく動かない。eldoc-setupすると動くけど補完ミスる。
