@@ -219,7 +219,7 @@
 (leaf ac-php
   :url "https://github.com/xcwen/ac-php"
   :mode-hook
-  (php-mode-hook . ((auto-complete-mode t)
+  (php-mode-hook . (;(auto-complete-mode t)
                     (setq ac-sources '(ac-source-php ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
                     (define-key php-mode-map (kbd "C-]") 'ac-php-find-symbol-at-point)
                     (define-key php-mode-map (kbd "C-t") 'ac-php-location-stack-back)
@@ -238,6 +238,15 @@
   :ensure t)
 
 (leaf yaml-mode
+  ensure: t)
+
+(leaf lsp-mode
+  :mode-hook
+  (c-mode-hook . ((lsp)))
+  (php-mode-hook . ((lsp)))
+  :ensure t)
+
+(leaf lsp-ui
   ensure: t)
 
 ;; setting end
