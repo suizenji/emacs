@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: prifun
+# key: prifun
+# --
+private function $1()
+{
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: profun
+# key: profun
+# --
+protected function $1()
+{
+}

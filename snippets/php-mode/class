@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: class
+# key: <?php
+# --
+<?php
+
+namespace $1;
+
+class $2
+{
+}
