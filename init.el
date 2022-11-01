@@ -213,6 +213,9 @@
   :url "https://github.com/emacs-php/php-mode"
   :custom ((php-enable-psr2-coding-style)))
 
+(leaf phpunit
+  :ensure t)
+
 ;; fixme mode-map
 ;; define-keyだとうまく動かない。eldoc-setupすると動くけど補完ミスる。
 ;; bindはグローバルなら動くがそれは嫌、けどmode-mapだけだとbindされない。
