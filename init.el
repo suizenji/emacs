@@ -234,6 +234,9 @@
 (leaf web-mode
   :url "https://web-mode.org/"
   :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'"
+  :mode-hook
+  (web-mode-hook . ((setq indent-tabs-mode nil)
+                    (setq tab-width 4)))
   :setq
   (web-mode-enable-current-element-highlight . t)
   (web-mode-enable-auto-pairing . t)
