@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tnr
+# key: tnr
+# --
+throw new \RuntimeException($1);

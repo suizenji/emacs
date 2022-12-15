@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dmp
+# key: dmp
+# --
+var_dump($1);
