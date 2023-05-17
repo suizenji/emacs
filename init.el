@@ -201,6 +201,7 @@
   :bind (
          ("C-c i" . helm-imenu)
          ("C-x C-r" . helm-recentf)
+         ("C-c g" . helm-gtags-find-files)
          ("M-t" . helm-gtags-find-tag)
          ("M-r" . helm-gtags-find-rtag)
          ("M-s" . helm-gtags-find-symbol)
