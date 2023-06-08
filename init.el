@@ -234,10 +234,15 @@
 
 (leaf web-mode
   :url "https://web-mode.org/"
-  :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'"
+  :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'" "\\.tsx?\\'"
   :mode-hook
-  (web-mode-hook . ((setq indent-tabs-mode nil)
-                    (setq tab-width 4)))
+  (web-mode-hook . (
+                    (setq indent-tabs-mode nil)
+;                    (setq tab-width 2)
+                    (setq web-mode-markup-indent-offset 2)
+                    (setq web-mode-css-indent-offset 2)
+                    (setq web-mode-code-indent-offset 2)
+                    ))
   :setq
   (web-mode-enable-current-element-highlight . t)
   (web-mode-enable-auto-pairing . t)
