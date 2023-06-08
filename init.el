@@ -234,7 +234,7 @@
 
 (leaf web-mode
   :url "https://web-mode.org/"
-  :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'" "\\.tsx?\\'" "\\.js?\\'"
+  :mode "\\.p?html?\\'" "\\.css?\\'" "\\.tsx?\\'" "\\.js?\\'"
   :mode-hook
   (web-mode-hook . (
                     (setq indent-tabs-mode nil)
@@ -242,13 +242,15 @@
                     (setq web-mode-markup-indent-offset 2)
                     (setq web-mode-css-indent-offset 2)
                     (setq web-mode-code-indent-offset 2)
-                    (lsp)
                     ))
   :setq
   (web-mode-enable-current-element-highlight . t)
   (web-mode-enable-auto-pairing . t)
   (web-mode-enable-auto-closing . t)
   :ensure t)
+
+(leaf twig-mode
+  ensure: t)
 
 (leaf yaml-mode
   ensure: t)
@@ -257,6 +259,7 @@
   :mode-hook
   (c-mode-hook . ((lsp)))
   (php-mode-hook . ((lsp)))
+  (web-mode-hook . ((lsp)))
   :ensure t)
 
 (leaf lsp-ui
