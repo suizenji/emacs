@@ -234,7 +234,7 @@
 
 (leaf web-mode
   :url "https://web-mode.org/"
-  :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'" "\\.tsx?\\'"
+  :mode "\\.p?html?\\'" "\\.twig?\\'" "\\.css?\\'" "\\.tsx?\\'" "\\.js?\\'"
   :mode-hook
   (web-mode-hook . (
                     (setq indent-tabs-mode nil)
