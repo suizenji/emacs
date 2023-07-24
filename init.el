@@ -196,6 +196,10 @@
   :ensure t
   :bind (("C-x g". magit-status)))
 
+(leaf markdown-preview-mode
+  :url "https://github.com/ancane/markdown-preview-mode"
+  :ensure t)
+
 (leaf helm-gtags
   :ensure t
   :bind (
