@@ -9,6 +9,7 @@
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+(setq create-lockfiles nil)
 
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
