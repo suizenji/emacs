@@ -11,6 +11,7 @@
 (setq auto-save-default nil)
 (setq create-lockfiles nil)
 
+
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
 ;; based on https://emacs-jp.github.io/tips/emacs-in-2020
@@ -265,6 +266,7 @@
   (c-mode-hook . ((lsp)))
   (php-mode-hook . ((lsp)))
   (web-mode-hook . ((lsp)))
+  (python-mode-hook . ((lsp)))
   :ensure t)
 
 (leaf lsp-ui
