@@ -272,6 +272,39 @@
 (leaf lsp-ui
   ensure: t)
 
+;; https://zenn.dev/lecto/articles/dad1d04c0605a1
+(leaf copilot
+  :el-get (copilot
+           :type github
+           :pkgname "zerolfx/copilot.el"
+           )
+  :config
+  (leaf editorconfig
+    :ensure t
+    )
+  (leaf s
+    :ensure t
+    )
+  (leaf dash
+    :ensure t
+    )
+
+  (defun my/copilot-tab ()
+    (interactive)
+    (or (copilot-accept-completion)
+        (indent-for-tab-command)))
+
+  (with-eval-after-load 'copilot
+    (define-key copilot-mode-map (kbd "C-t") #'my/copilot-tab))
+
+  :mode-hook
+  (c-mode-hook . ((copilot-mode)))
+  (php-mode-hook . ((copilot-mode)))
+  (web-mode-hook . ((copilot-mode)))
+  (python-mode-hook . ((copilot-mode)))
+
+  )
+
 ;; setting end
 
 (provide 'init)
