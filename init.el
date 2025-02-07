@@ -194,6 +194,9 @@
 (leaf ag
   :ensure t)
 
+(leaf copilot-chat
+  :ensure t)
+
 (leaf magit
   :ensure t
   :bind (("C-x g". magit-status)))
@@ -309,7 +312,20 @@
 
 (provide 'init)
 
-;; Local Variables:
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(lsp-java dash s editorconfig lsp-mode web-mode ac-php phpunit php-mode helm-gtags markdown-preview-mode magit ag string-inflection company-c-headers company flycheck ivy-prescient prescient counsel swiper ivy macrostep leaf-tree leaf-convert blackout el-get hydra leaf-keywords)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+ ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
 
